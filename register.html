@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logga in</title>
+    <title>Registration</title>
     <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1>Autentisering</h1>
+        <h1>Authentication</h1>
         <nav>
             <a href="index.html">Startsida</a>
             <a href="login.html">Logga in</a>
@@ -20,16 +21,20 @@
     </header>
 
         <main>
-        <h1>Registrera dig</h1>
-        <form>
-            <label for="username">Användarnamn</label>
-            <input type="text" id="username" name="username" placeholder="Användarnamn"/>
+        <h1>Create account</h1>
+
+        <div id="message" class="message"></div>
+
+        <form id="registerForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username"/>
             
-            <label for="password">Lösenord</label>
-            <input type="password" id="password" name="password" placeholder="Lösenord"/>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password"/>
             
-            <button type="submit">Registrera dig</button>
+            <button type="submit">Create account</button>
         </form>
+
     </main>
 
 </body>
