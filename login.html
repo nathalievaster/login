@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logga in</title>
     <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/login.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1>Autentisering</h1>
+        <h1>Authentication</h1>
         <nav>
             <a href="index.html">Startsida</a>
             <a href="login.html" class="active">Logga in</a>
@@ -20,15 +21,18 @@
     </header>
 
     <main>
-        <h1>Logga in</h1>
-        <form>
-            <label for="username">Användarnamn</label>
-            <input type="text" id="username" name="username" placeholder="Användarnamn"/>
+        <h1>Log in</h1>
+
+        <div id="loginMessage" class="message"></div>
+
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username"/>
             
-            <label for="password">Lösenord</label>
-            <input type="password" id="password" name="password" placeholder="Lösenord"/>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password"/>
             
-            <button type="submit">Logga in</button>
+            <button type="submit">Sign in</button>
         </form>
     </main>
 

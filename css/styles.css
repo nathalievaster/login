@@ -116,3 +116,21 @@ button:hover {
     background-color: #3b82f6;
     transition: 0.3s ease-in-out;
 }
+
+/* Style för meddelanden till användare */
+.message {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
