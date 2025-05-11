@@ -29,6 +29,52 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Startsidan */
+.auth-start {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.auth-start h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.auth-start p {
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.auth-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.auth-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #1e3a8a;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.auth-button:hover {
+    background-color: #3b82f6;
+}
+
+.divider {
+    margin: 0.5rem 0;
+    font-weight: bold;
+    color: #888;
+}
+
+/* Formulär-sidorna */
+
 main {
     max-width: 400px;
     margin: 2rem auto;
