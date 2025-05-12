@@ -19,8 +19,9 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
         const data = await response.json();
 
         if (response.ok) {
-            messageEl.textContent = "Registration successful!";
+            messageEl.textContent = "Registration successful! You're being redirected...";
             messageEl.className = "message success";
+            setTimeout(() => window.location.href = "login.html", 1500);
         } else {
             messageEl.textContent = data.message || "Registrering misslyckades.";
             messageEl.className = "message error";
