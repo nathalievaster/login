@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Om användare inte är inloggad
         nav.innerHTML = `
             <a href="index.html">Home</a>
-            <a href="login.html">sign in</a>
+            <a href="login.html">Sign in</a>
             <a href="register.html">Register</a>
             <a href="secret.html">Secret</a>
         `;

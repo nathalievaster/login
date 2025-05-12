@@ -19,8 +19,9 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
 
     if (response.ok) {
         localStorage.setItem("jwt", data.response.token);
-        messageDiv.textContent = "Login successful!";
+        messageDiv.textContent = "Login successful! You are being redirected...";
         messageDiv.className = "message success";
+        setTimeout(() => window.location.href = "index.html", 1500);
 
 
     } else {
