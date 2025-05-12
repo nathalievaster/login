@@ -23,7 +23,7 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
             messageEl.className = "message success";
             setTimeout(() => window.location.href = "login.html", 1500);
         } else {
-            messageEl.textContent = data.message || "Registrering misslyckades.";
+            messageEl.textContent = data.message || "Registration failed.";
             messageEl.className = "message error";
         }
     } catch (error) {
