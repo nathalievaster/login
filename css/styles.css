@@ -138,3 +138,37 @@ button:hover {
 div a {
     text-decoration: none;
 }
+
+  #secretContent {
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+  }
+
+  #secretContent ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  #secretContent li {
+    background-color: #f0f4f8;
+    margin-bottom: 10px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: background-color 0.3s ease;
+  }
+
+  #secretContent li:hover {
+    background-color: #e2e8f0;
+  }
+
+  #secretContent li span {
+    display: block;
+    font-weight: bold;
+    color: #333;
+  }
+
+  #secretContent li small {
+    color: #666;
+    font-size: 0.9em;
+  }

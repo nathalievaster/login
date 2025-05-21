@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const token = localStorage.getItem("jwt");
 
     if (!token) {
-        // Ingen token – skicka tillbaka till login-sidan
         window.location.href = "login.html";
         return;
     }
@@ -20,10 +19,34 @@ document.addEventListener("DOMContentLoaded", async () => {
         const data = await response.json();
 
         if (response.ok) {
-            // Visa skyddad data
-            document.getElementById("secretContent");
+            // Plocka ut elementet där vi vill visa användarna
+            const secretContent = document.getElementById("secretContent");
+
+            // Rensa tidigare innehåll
+            secretContent.innerHTML = "";
+
+            // Skapa en lista med användare
+            const userList = document.createElement("ul");
+            data.users.forEach(user => {
+                const li = document.createElement("li");
+
+                // Formatera datumet
+                const createdDate = new Date(user.created).toLocaleDateString("sv-SE", {
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "2-digit"
+                });
+
+                li.innerHTML = `
+                <strong>ID:</strong> ${user.id}, <br>
+                <strong>Användarnamn:</strong> ${user.username}, <br>
+                <strong>Skapad:</strong> ${createdDate}
+                `;
+                userList.appendChild(li);
+            });
+
+            secretContent.appendChild(userList);
         } else {
-            // Token ogiltig eller utgången
             localStorage.removeItem("jwt");
             window.location.href = "login.html";
         }
